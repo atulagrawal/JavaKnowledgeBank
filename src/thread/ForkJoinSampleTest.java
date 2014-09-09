@@ -1,5 +1,7 @@
 package thread;
-
+/*
+ * http://howtodoinjava.com/2014/05/27/forkjoin-framework-tutorial-forkjoinpool-example/
+ */
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.TimeUnit;
 
