@@ -1,32 +1,24 @@
 package thread.producerconsumer;
 
-import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
 
 public class Broker {
-    ArrayBlockingQueue<Integer> queue;
+    LinkedBlockingQueue<IPhone> queue;
     private boolean isActive;
 
     public Broker() {
-        queue = new ArrayBlockingQueue<Integer>(100);
+        queue = new LinkedBlockingQueue();
     }
 
-    public void produce(Integer value) {
+    public void put(IPhone value) {
         queue.add(value);
     }
 
-    public Integer consume() {
+    public IPhone get() {
         return queue.poll();
     }
-
-    public boolean isActive() {
-        return isActive;
-    }
-
-    public void setActive(boolean isActive) {
-        this.isActive = isActive;
-    }
-
-    public boolean hasUnprocessedItems() {
-        return queue.size() > 0;
+    
+    public boolean hashMoreIPhones() {
+        return queue.size()>0;
     }
 }
