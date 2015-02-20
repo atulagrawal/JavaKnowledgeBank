@@ -11,6 +11,16 @@ public class BinarySearchTree {
 		
 	}
 	
+	public Node<Integer> search(Node<Integer> node, Integer value) {
+		if(node==null) return null;
+		if(value.equals(node.getData())) {
+			return node;
+		} else if(value > node.getData()){
+			return search(node.getRight(),value);
+		} else {
+			return search(node.getLeft(),value);
+		}
+	}
 	public boolean insert1(Node<Integer> root, Integer value) {
 		//insert into the leaf node
 		if(root!=null) {

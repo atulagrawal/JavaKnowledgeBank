@@ -15,7 +15,14 @@ public class BinarySearchTreeTest {
 		tree.insert2(node, 175);
 		tree.insert2(node, 175);
 		TreeTraverse.inorder(node);
-		
+		System.out.println("\n ------------------------");
+		System.out.println(tree.search(node, 80));
+		System.out.println(tree.search(node, 60));
+		System.out.println(tree.search(node, 100));
+		System.out.println(tree.search(node, 25));
+		System.out.println(tree.search(node, 175));
+		System.out.println(tree.search(node, 500));
+		System.out.println(tree.search(node, 5));
 
 	}
 
