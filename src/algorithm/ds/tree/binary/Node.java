@@ -2,13 +2,25 @@ package algorithm.ds.tree.binary;
 
 
 public class Node<T> {
-	public Node<T> left;
-	public Node<T> right;
-	public T data;
+	private Node<T> left;
+	private Node<T> right;
+	private T data;
 
+	
 	public Node(T data) {
 		this.data = data;
 	}
+
+	
+	public T getData() {
+		return data;
+	}
+
+
+	public void setData(T data) {
+		this.data = data;
+	}
+
 
 	public Node<T> getLeft() {
 		return this.left;

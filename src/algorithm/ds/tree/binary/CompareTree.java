@@ -9,7 +9,7 @@ public class CompareTree {
 			status = true;
 		}
 		if(node1!=null && node2!=null) {
-			System.out.println(node1.data);
+			System.out.println(node1.getData());
 			status = (node1.equals(node2) && 
 					compareTree(node1.getLeft(),node2.getLeft()) &&
 					compareTree(node1.getRight(), node2.getRight()));

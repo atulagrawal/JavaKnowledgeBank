@@ -8,7 +8,7 @@ public class TreeTraverse {
 	
 	public static void preorder(Node<?> n) {
 		if (n != null) {
-			System.out.print(n.data + " ");
+			System.out.print(n.getData() + " ");
 			preorder(n.getLeft());
 			preorder(n.getRight());
 		}
@@ -17,7 +17,7 @@ public class TreeTraverse {
 	public static void inorder(Node<?> n) {
 		if (n != null) {
 			inorder(n.getLeft());
-			System.out.print(n.data + " ");
+			System.out.print(n.getData() + " ");
 			inorder(n.getRight());
 		}
 	}
@@ -32,7 +32,7 @@ public class TreeTraverse {
 				node = node.getLeft();
 			} else {
 				node = stack.pop();
-				System.out.print(node.data + " ");
+				System.out.print(node.getData() + " ");
 				node = node.getRight();
 			}
 			
@@ -44,7 +44,7 @@ public class TreeTraverse {
 		if (n != null) {
 			postorder(n.getLeft());
 			postorder(n.getRight());
-			System.out.print(n.data + " ");
+			System.out.print(n.getData() + " ");
 		}
 	}
 
@@ -54,7 +54,7 @@ public class TreeTraverse {
 			nodequeue.add(n);
 		while (!nodequeue.isEmpty()) {
 			Node<?> next = nodequeue.remove();
-			System.out.print(next.data + " ");
+			System.out.print(next.getData() + " ");
 			if (next.getLeft() != null) {
 				nodequeue.add(next.getLeft());
 			}
