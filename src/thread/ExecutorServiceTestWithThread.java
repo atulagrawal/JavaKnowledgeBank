@@ -12,6 +12,7 @@ public class ExecutorServiceTestWithThread {
     public static void main(String[] args) {
         ExecutorService executorService = Executors.newFixedThreadPool(3);
         for (int i = 0; i < 10; i++) {
+        	// Using thread instead of Runnable and Callable is WRONG approach. A thread is not a task.
             Thread t = new Thread(i + "") {
                 public void run() {
                     try {

@@ -11,6 +11,7 @@ public class ExecutorTest {
     public static void main(String[] args) {
         Executor executor = Executors.newFixedThreadPool(3);
         for (int i = 0; i < 10; i++) {
+        	//Don't use thread
             Thread t = new Thread(""+i) {
                 public void run() {
                     try {
